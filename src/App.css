@@ -1,4 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap");
+
+body {
+  font-family: "Dancing Script", cursive;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 nav,
 footer {
   background-color: salmon;
+  color: white;
+}
+
+.seccionPrincipal {
+  flex-grow: 1;
+}
+
+@media (min-width: 577px) {
+  .carousel-item {
+    height: 18rem;
+  }
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 769px) {
+  .carousel-item {
+    height: 30rem;
+  }
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
