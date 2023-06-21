@@ -8,6 +8,7 @@ import Inicio from "./components/views/Inicio";
 import Error404 from "./components/views/Error404";
 import Login from "./components/views/Login";
 import DetalleReceta from "./components/views/DetalleReceta";
+import Administrador from "./components/views/Administrador";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <Inicio></Inicio> */}
       {/* <Error404></Error404> */}
       {/* <Login></Login> */}
-      <DetalleReceta></DetalleReceta>
+      {/* <DetalleReceta></DetalleReceta> */}
+      <Administrador></Administrador>
       <Footer></Footer>
     </>
   );
