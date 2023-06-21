@@ -1,12 +1,18 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 function Menu() {
   return (
     <Navbar expand="lg" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home">Blog de Recetas</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <span className="me-2">
+            <MDBIcon fas icon="utensils" size="lg" />
+          </span>
+          Blog de Recetas
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">

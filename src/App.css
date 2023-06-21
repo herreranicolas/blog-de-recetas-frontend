@@ -10,12 +10,6 @@ body {
   min-height: 100vh;
 }
 
-nav,
-footer {
-  background-color: salmon;
-  color: white;
-}
-
 .card-title {
   color: salmon;
   font-family: "Dancing Script", cursive;
@@ -23,7 +17,8 @@ footer {
 }
 
 .card-body,
-.mask {
+.mask,
+form {
   font-family: "Poppins", sans-serif;
 }
 
@@ -46,6 +41,20 @@ footer {
 
 .seccionPrincipal {
   flex-grow: 1;
+}
+
+.gradient-custom-2,
+nav,
+footer {
+  background: #fa8072;
+  background: -webkit-linear-gradient(
+    to right,
+    #fa8072,
+    #f16060,
+    #ff3655,
+    #f4455f
+  );
+  background: linear-gradient(to right, #fa8072, #f16060, #ff3655, #f4455f);
 }
 
 @media (min-width: 577px) {
