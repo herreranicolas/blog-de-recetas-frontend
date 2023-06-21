@@ -12,14 +12,20 @@ const ItemReceta = () => {
       <td>
         <span
           className="d-inline-block text-truncate"
-          style={{ maxWidth: 250 }}
+          style={{ maxWidth: 200 }}
         >
           https://images.unsplash.com/photo-1622973536968-3ead9e780960?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
         </span>
       </td>
       <td>
-        <Button className="btn btn-warning">Editar</Button>
-        <Button variant="danger">Borrar</Button>
+        <div className="d-flex gap-2">
+          <Button className="btn btn-warning">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </Button>
+          <Button variant="danger">
+            <i class="fa-solid fa-trash"></i>
+          </Button>
+        </div>
       </td>
     </tr>
   );

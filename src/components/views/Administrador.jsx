@@ -16,7 +16,7 @@ const Administrador = () => {
           </Col>
         </Row>
         <Row>
-          <Table responsive striped bordered hover>
+          <Table responsive striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>Nombre</th>
