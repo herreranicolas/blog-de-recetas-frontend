@@ -26,6 +26,10 @@ form {
   font-family: "Dancing Script", cursive;
 }
 
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
 .card:hover {
   transform: scale(1.025);
   filter: contrast(125%);
@@ -55,6 +59,34 @@ footer {
     #f4455f
   );
   background: linear-gradient(to right, #fa8072, #f16060, #ff3655, #f4455f);
+}
+
+#controlled-tab-example-tab-ingredientes {
+  background-color: #fff;
+  color: black;
+  margin-right: 0.5rem;
+}
+
+#controlled-tab-example-tab-ingredientes.nav-link.active {
+  background-color: #fa8072;
+}
+
+#controlled-tab-example-tab-instrucciones {
+  background-color: #fff;
+  color: black;
+}
+
+#controlled-tab-example-tab-instrucciones.nav-link.active {
+  background-color: #fa8072;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  color: #fa8072;
+}
+
+li span {
+  color: #fff !important;
 }
 
 @media (min-width: 577px) {
