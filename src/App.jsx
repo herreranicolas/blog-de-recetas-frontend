@@ -9,7 +9,8 @@ import Error404 from "./components/views/Error404";
 import Login from "./components/views/Login";
 import DetalleReceta from "./components/views/DetalleReceta";
 import Administrador from "./components/views/Administrador";
-import CrearProducto from "./components/views/recetas/CrearProducto";
+import CrearReceta from "./components/views/recetas/CrearReceta";
+import EditarReceta from "./components/views/recetas/EditarReceta";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <Login></Login> */}
       {/* <DetalleReceta></DetalleReceta> */}
       {/* <Administrador></Administrador> */}
-      <CrearProducto></CrearProducto>
+      {/* <CrearReceta></CrearReceta> */}
+      <EditarReceta></EditarReceta>
       <Footer></Footer>
     </>
   );
