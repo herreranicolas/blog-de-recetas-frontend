@@ -5,12 +5,14 @@ import "./App.css";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import Inicio from "./components/views/Inicio";
+import Error404 from "./components/views/Error404";
 
 function App() {
   return (
     <>
       <Menu></Menu>
-      <Inicio></Inicio>
+      {/* <Inicio></Inicio> */}
+      <Error404></Error404>
       <Footer></Footer>
     </>
   );

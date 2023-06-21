@@ -22,8 +22,13 @@ footer {
   font-weight: bolder;
 }
 
-.card-body {
+.card-body,
+.mask {
   font-family: "Poppins", sans-serif;
+}
+
+.font-ds {
+  font-family: "Dancing Script", cursive;
 }
 
 .card:hover {
