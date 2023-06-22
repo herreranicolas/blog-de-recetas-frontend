@@ -8,11 +8,10 @@ import Inicio from "./components/views/Inicio";
 import Error404 from "./components/views/Error404";
 import Login from "./components/views/Login";
 import DetalleReceta from "./components/views/DetalleReceta";
-import Administrador from "./components/views/Administrador";
-import CrearReceta from "./components/views/recetas/CrearReceta";
-import EditarReceta from "./components/views/recetas/EditarReceta";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import RutasProtegidas from "./components/routes/RutasProtegidas";
+import RutasAdministrador from "./components/routes/RutasAdministrador";
 
 function App() {
   const [usuarioLogueado, setUsuarioLogueado] = useState(
@@ -38,20 +37,14 @@ function App() {
           element={<DetalleReceta></DetalleReceta>}
         ></Route>
         <Route
-          exact
-          path="/administrador"
-          element={<Administrador></Administrador>}
+          path="/administrador/*"
+          element={
+            <RutasProtegidas>
+              <RutasAdministrador></RutasAdministrador>
+            </RutasProtegidas>
+          }
         ></Route>
-        <Route
-          exact
-          path="/administrador/crear-receta"
-          element={<CrearReceta></CrearReceta>}
-        ></Route>
-        <Route
-          exact
-          path="/administrador/editar-receta"
-          element={<EditarReceta></EditarReceta>}
-        ></Route>
+
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>
       <Footer></Footer>
