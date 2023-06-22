@@ -1,0 +1,84 @@
+{
+  "recetas": [
+    {
+      "id": 1,
+      "nombre": "Tarta de manzana",
+      "descripcion": "Una deliciosa tarta de manzana casera con una base crujiente y un relleno jugoso de manzanas dulces. Perfecta para cualquier ocasión.",
+      "ingredientes": ["manzanas", "harina", "azúcar"],
+      "pasos": [
+        "Pelar y cortar las manzanas",
+        "Preparar la masa",
+        "Hornear a 180°C por 30 minutos"
+      ],
+      "imagen": "https://images.pexels.com/photos/102164/pexels-photo-102164.jpeg"
+    },
+    {
+      "id": 2,
+      "nombre": "Spaghetti a la bolognesa",
+      "descripcion": "Un clásico plato de pasta italiano con una salsa bolognesa rica y sabrosa. Los espaguetis se combinan perfectamente con la carne molida, los tomates y las especias.",
+      "ingredientes": [
+        "spaghetti",
+        "carne molida",
+        "tomates",
+        "cebolla",
+        "ajo"
+      ],
+      "pasos": [
+        "Cocinar la pasta al dente",
+        "Sofreír la cebolla y el ajo",
+        "Agregar la carne molida y los tomates",
+        "Cocinar a fuego lento por 30 minutos",
+        "Servir la salsa sobre la pasta"
+      ],
+      "imagen": "https://images.pexels.com/photos/2076/food-italian-pizza-restaurant.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Ensalada César",
+      "descripcion": "Una refrescante ensalada clásica con lechuga crujiente, pollo tierno, trozos de pan tostado y un aderezo cremoso. Una combinación perfecta de sabores y texturas.",
+      "ingredientes": [
+        "lechuga romana",
+        "pollo",
+        "pan tostado",
+        "queso parmesano",
+        "aderezo"
+      ],
+      "pasos": [
+        "Lavar y cortar la lechuga",
+        "Cocinar el pollo y cortarlo en tiras",
+        "Preparar los trozos de pan tostado",
+        "Mezclar todos los ingredientes en un bol",
+        "Agregar el aderezo y mezclar bien"
+      ],
+      "imagen": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+    },
+    {
+      "id": 4,
+      "nombre": "Pastel de chocolate",
+      "descripcion": "Un delicioso pastel de chocolate con una textura suave y un sabor intenso. Cada bocado es un placer para los amantes del chocolate.",
+      "ingredientes": [
+        "harina",
+        "azúcar",
+        "cacao en polvo",
+        "huevos",
+        "mantequilla"
+      ],
+      "pasos": [
+        "Mezclar los ingredientes secos en un bol",
+        "Agregar los huevos y la mantequilla derretida",
+        "Batir la mezcla hasta obtener una masa suave",
+        "Hornear a 180°C por 40 minutos",
+        "Dejar enfriar antes de servir"
+      ],
+      "imagen": "https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg"
+    }
+  ],
+  "usuarioAdmin": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "admin@admin.com",
+      "password": "123456aA"
+    }
+  ]
+}
