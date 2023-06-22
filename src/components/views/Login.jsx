@@ -1,4 +1,4 @@
-import { Form, Button, Container, Card } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 
 const Login = () => {
   return (

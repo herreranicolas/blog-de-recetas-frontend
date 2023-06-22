@@ -1,6 +1,7 @@
 import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 function CardReceta() {
   return (
@@ -21,7 +22,9 @@ function CardReceta() {
           Un clásico plato de pasta italiano con una salsa bolognesa rica y
           sabrosa.
         </Card.Text>
-        <Button variant="outline-danger">Ver receta</Button>
+        <Button as={Link} variant="outline-danger" to="/detalle">
+          Ver receta
+        </Button>
       </Card.Body>
     </Card>
   );

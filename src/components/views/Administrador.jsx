@@ -1,4 +1,5 @@
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import ItemReceta from "./recetas/ItemReceta";
 
 const Administrador = () => {
@@ -9,7 +10,11 @@ const Administrador = () => {
           <Col>
             <h1 className="text-center display-5">Administrar recetas</h1>
             <div className="text-center">
-              <Button className="btn gradient-custom-2" to="/administrar/crear">
+              <Button
+                as={Link}
+                className="btn gradient-custom-2"
+                to="/administrador/crear-receta"
+              >
                 Agregar nueva receta
               </Button>
             </div>

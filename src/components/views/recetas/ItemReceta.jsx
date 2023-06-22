@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const ItemReceta = () => {
   return (
     <tr>
@@ -19,7 +20,11 @@ const ItemReceta = () => {
       </td>
       <td>
         <div className="d-flex gap-2">
-          <Button className="btn btn-warning">
+          <Button
+            as={Link}
+            className="btn btn-warning"
+            to="/administrador/editar-receta"
+          >
             <i class="fa-solid fa-pen-to-square"></i>
           </Button>
           <Button variant="danger">

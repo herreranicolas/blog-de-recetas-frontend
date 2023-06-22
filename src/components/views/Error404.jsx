@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Error404 = () => {
   return (
     <section
@@ -14,9 +16,13 @@ const Error404 = () => {
             <h4 className="mb-3 fw-bold">
               Oops! No encontramos la página que estás buscando.
             </h4>
-            <a className="btn btn-danger btn-lg fw-bold" href="#" role="button">
+            <Link
+              className="btn btn-danger btn-lg fw-bold"
+              to="/"
+              role="button"
+            >
               Volver al Inicio
-            </a>
+            </Link>
           </div>
         </div>
       </div>
