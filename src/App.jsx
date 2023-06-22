@@ -11,20 +11,39 @@ import DetalleReceta from "./components/views/DetalleReceta";
 import Administrador from "./components/views/Administrador";
 import CrearReceta from "./components/views/recetas/CrearReceta";
 import EditarReceta from "./components/views/recetas/EditarReceta";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Menu></Menu>
-      {/* <Inicio></Inicio> */}
-      {/* <Error404></Error404> */}
-      {/* <Login></Login> */}
-      {/* <DetalleReceta></DetalleReceta> */}
-      {/* <Administrador></Administrador> */}
-      {/* <CrearReceta></CrearReceta> */}
-      <EditarReceta></EditarReceta>
+      <Routes>
+        <Route exact path="/" element={<Inicio></Inicio>}></Route>
+        <Route exact path="/login" element={<Login></Login>}></Route>
+        <Route
+          exact
+          path="/detalle"
+          element={<DetalleReceta></DetalleReceta>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador"
+          element={<Administrador></Administrador>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador/crear-receta"
+          element={<CrearReceta></CrearReceta>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador/editar-receta"
+          element={<EditarReceta></EditarReceta>}
+        ></Route>
+        <Route path="*" element={<Error404></Error404>}></Route>
+      </Routes>
       <Footer></Footer>
-    </>
+    </BrowserRouter>
   );
 }
 
