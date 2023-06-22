@@ -1,6 +1,7 @@
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemReceta from "./recetas/ItemReceta";
+import { useEffect, useState } from "react";
 
 const Administrador = () => {
   return (

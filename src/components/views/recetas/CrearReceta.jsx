@@ -12,6 +12,7 @@ const CrearReceta = () => {
 
   const onSubmit = (nuevaReceta) => {
     nuevaReceta.id = uuidv4();
+    console.log(nuevaReceta);
   };
   return (
     <section className="seccionPrincipal font-poppins">
