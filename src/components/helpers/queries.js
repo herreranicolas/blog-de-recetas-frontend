@@ -1,4 +1,5 @@
 import { usuarioAdmin } from "../../../db.json";
+import { recetas } from "../../../db.json";
 
 export const iniciarSesion = (usuario) => {
   if (usuario.email === usuarioAdmin[0].email) {
