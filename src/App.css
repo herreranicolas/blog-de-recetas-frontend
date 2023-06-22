@@ -89,6 +89,10 @@ li span {
   color: #fff !important;
 }
 
+.swal2-container {
+  font-family: "Poppins", sans-serif;
+}
+
 @media (min-width: 577px) {
   .carousel-item {
     height: 18rem;

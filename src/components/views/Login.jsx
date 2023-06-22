@@ -1,5 +1,7 @@
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { iniciarSesion } from "../helpers/queries";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const {
@@ -10,7 +12,19 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (usuario) => {
-    console.log(usuario);
+    const respuesta = iniciarSesion(usuario);
+    if (respuesta) {
+      console.log("Bien");
+      sessionStorage.setItem("usuario", respuesta.nombreUsuario);
+      reset();
+    } else {
+      Swal.fire({
+        title: "Oops! Lo siento!",
+        text: "Los datos ingresados son incorrectos",
+        icon: "error",
+        confirmButtonColor: "#fa8072",
+      });
+    }
   };
 
   return (
