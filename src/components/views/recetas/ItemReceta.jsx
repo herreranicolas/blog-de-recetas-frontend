@@ -25,10 +25,10 @@ const ItemReceta = () => {
             className="btn btn-warning"
             to="/administrador/editar-receta"
           >
-            <i class="fa-solid fa-pen-to-square"></i>
+            <i className="fa-solid fa-pen-to-square"></i>
           </Button>
           <Button variant="danger">
-            <i class="fa-solid fa-trash"></i>
+            <i className="fa-solid fa-trash"></i>
           </Button>
         </div>
       </td>

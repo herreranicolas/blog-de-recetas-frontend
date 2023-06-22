@@ -12,14 +12,26 @@ import Administrador from "./components/views/Administrador";
 import CrearReceta from "./components/views/recetas/CrearReceta";
 import EditarReceta from "./components/views/recetas/EditarReceta";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [usuarioLogueado, setUsuarioLogueado] = useState(
+    "" || sessionStorage.getItem("usuario")
+  );
+
   return (
     <BrowserRouter>
-      <Menu></Menu>
+      <Menu
+        usuarioLogueado={usuarioLogueado}
+        setUsuarioLogueado={setUsuarioLogueado}
+      ></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
-        <Route exact path="/login" element={<Login></Login>}></Route>
+        <Route
+          exact
+          path="/login"
+          element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
+        ></Route>
         <Route
           exact
           path="/detalle"

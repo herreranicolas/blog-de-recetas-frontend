@@ -2,9 +2,16 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { MDBIcon } from "mdb-react-ui-kit";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
-function Menu() {
+function Menu({ usuarioLogueado, setUsuarioLogueado }) {
+  const navegacion = useNavigate();
+  const cerrarSesion = () => {
+    sessionStorage.removeItem("usuario");
+    setUsuarioLogueado("");
+    navegacion("/");
+  };
   return (
     <Navbar expand="lg" data-bs-theme="dark">
       <Container>
@@ -17,12 +24,26 @@ function Menu() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink end className="nav-item nav-link" to="/login">
-              Iniciar sesión
-            </NavLink>
-            <NavLink end className="nav-item nav-link" to="/administrador">
-              Administrador
-            </NavLink>
+            {usuarioLogueado ? (
+              <>
+                <NavLink end className="nav-item nav-link" to="/administrador">
+                  Administrador
+                </NavLink>
+                <div>
+                  <Button
+                    variant="dark"
+                    className="text-capitalize"
+                    onClick={cerrarSesion}
+                  >
+                    Logout
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <NavLink end className="nav-item nav-link" to="/login">
+                Iniciar sesión
+              </NavLink>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
