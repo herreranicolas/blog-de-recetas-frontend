@@ -23,7 +23,7 @@ const Administrador = () => {
         });
       }
     });
-  }, []);
+  }, [recetas]);
 
   const componenteRenderizado = mostrarSpinner ? (
     <div className="my-5">

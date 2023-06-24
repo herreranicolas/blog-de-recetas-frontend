@@ -23,7 +23,7 @@ const Inicio = () => {
         });
       }
     });
-  }, []);
+  }, [recetas]);
   return (
     <section className="container seccionPrincipal">
       <h1 className="text-center py-2 fw-bolder">Recetas de Cocina</h1>
