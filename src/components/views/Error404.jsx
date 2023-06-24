@@ -7,9 +7,9 @@ const Error404 = () => {
         paddingLeft: 0,
         backgroundImage: "url('../src/assets/kitchen-illustration.jpg')",
       }}
-      className="seccionPrincipal p-5 text-center bg-image"
+      className="seccionPrincipal p-5 d-flex justify-content-center align-items-center text-center"
     >
-      <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+      <div className="mask bg-dark opacity-75 p-3">
         <div className="d-flex justify-content-center align-items-center h-100">
           <div className="text-white">
             <h1 className="display-3 font-ds fw-bold">Error 404</h1>
