@@ -1,6 +1,5 @@
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { v4 as uuidv4 } from "uuid";
 
 const CrearReceta = () => {
   const {
@@ -11,7 +10,6 @@ const CrearReceta = () => {
   } = useForm();
 
   const onSubmit = (nuevaReceta) => {
-    nuevaReceta.id = uuidv4();
     console.log(nuevaReceta);
   };
   return (
