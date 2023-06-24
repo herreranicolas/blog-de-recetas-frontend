@@ -15,20 +15,24 @@ const Login = ({ setUsuarioLogueado }) => {
   const navegacion = useNavigate();
 
   const onSubmit = (usuario) => {
-    const respuesta = iniciarSesion(usuario);
-    if (respuesta) {
-      sessionStorage.setItem("usuario", respuesta.nombreUsuario);
-      setUsuarioLogueado(respuesta.nombreUsuario);
-      reset();
-      navegacion("/administrador");
-    } else {
-      Swal.fire({
-        title: "Oops! Lo siento!",
-        text: "Los datos ingresados son incorrectos",
-        icon: "error",
-        confirmButtonColor: "#fa8072",
-      });
-    }
+    iniciarSesion(usuario).then((respuesta) => {
+      if (respuesta) {
+        sessionStorage.setItem(
+          "usuario",
+          JSON.stringify(respuesta.nombreUsuario)
+        );
+        setUsuarioLogueado(respuesta.nombreUsuario);
+        reset();
+        navegacion("/administrador");
+      } else {
+        Swal.fire({
+          title: "Oops! Lo siento!",
+          text: "Los datos ingresados son incorrectos",
+          icon: "error",
+          confirmButtonColor: "#fa8072",
+        });
+      }
+    });
   };
 
   return (

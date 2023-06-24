@@ -10,7 +10,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
   const navegacion = useNavigate();
   const cerrarSesion = () => {
     sessionStorage.removeItem("usuario");
-    setUsuarioLogueado("");
+    setUsuarioLogueado({});
     navegacion("/");
   };
   return (
@@ -23,7 +23,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {usuarioLogueado ? (
+            {usuarioLogueado === "admin" ? (
               <>
                 <NavLink end className="nav-item nav-link" to="/administrador">
                   Administrador

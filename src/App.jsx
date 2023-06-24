@@ -14,7 +14,7 @@ import RutasAdministrador from "./components/routes/RutasAdministrador";
 
 function App() {
   const [usuarioLogueado, setUsuarioLogueado] = useState(
-    "" || sessionStorage.getItem("usuario")
+    {} || sessionStorage.getItem("usuario")
   );
 
   return (
