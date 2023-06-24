@@ -21,3 +21,13 @@ export const iniciarSesion = async (usuario) => {
     console.log(error);
   }
 };
+
+export const obtenerListaRecetas = async () => {
+  try {
+    const respuesta = await fetch(URL_recetas);
+    const listaRecetas = await respuesta.json();
+    return listaRecetas;
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -1,21 +1,18 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-const ItemReceta = () => {
+const ItemReceta = ({ receta }) => {
   return (
     <tr>
-      <td>Spaghetti a la bolognesa</td>
-      <td>
-        Un clásico plato de pasta italiano con una salsa bolognesa rica y
-        sabrosa.
-      </td>
-      <td>Spaghetti, carne molida, tomates, cebolla, ajo</td>
-      <td>Spaghetti, carne molida, tomates, cebolla, ajo</td>
+      <td>{receta.nombre}</td>
+      <td>{receta.descripcion}</td>
+      <td>{receta.ingredientes.join(", ") || receta.ingredientes}</td>
+      <td>{receta.pasos.join(", ") || receta.pasos}</td>
       <td>
         <span
           className="d-inline-block text-truncate"
           style={{ maxWidth: 200 }}
         >
-          https://images.unsplash.com/photo-1622973536968-3ead9e780960?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
+          {receta.imagen}
         </span>
       </td>
       <td>

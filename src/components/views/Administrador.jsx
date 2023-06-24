@@ -1,9 +1,38 @@
-import { Container, Row, Col, Table, Button } from "react-bootstrap";
+import { Container, Row, Col, Table, Button, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemReceta from "./recetas/ItemReceta";
 import { useEffect, useState } from "react";
+import { obtenerListaRecetas } from "../helpers/queries";
+import Swal from "sweetalert2";
 
 const Administrador = () => {
+  const [recetas, setRecetas] = useState({});
+  const [mostrarSpinner, setMostrarSpinner] = useState(true);
+
+  useEffect(() => {
+    obtenerListaRecetas().then((respuesta) => {
+      if (respuesta) {
+        setRecetas(respuesta);
+        setMostrarSpinner(false);
+      } else {
+        Swal.fire({
+          title: "Oops! Lo siento!",
+          text: "Intente realizar esta operación en otro momento.",
+          icon: "error",
+          confirmButtonColor: "#fa8072",
+        });
+      }
+    });
+  }, []);
+
+  const componenteRenderizado = mostrarSpinner ? (
+    <div className="my-5">
+      <Spinner animation="border" variant="primary" />
+    </div>
+  ) : (
+    <tbody></tbody>
+  );
+
   return (
     <section className="seccionPrincipal font-poppins">
       <Container className="py-3">
@@ -33,9 +62,27 @@ const Administrador = () => {
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tbody>
-              <ItemReceta></ItemReceta>
-            </tbody>
+            {mostrarSpinner ? (
+              <tbody>
+                <tr>
+                  <td colSpan={6}>
+                    <div className="text-center">
+                      <Spinner
+                        animation="border"
+                        variant="danger"
+                        className="text-danger"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            ) : (
+              <tbody>
+                {recetas.map((receta) => (
+                  <ItemReceta key={receta.id} receta={receta}></ItemReceta>
+                ))}
+              </tbody>
+            )}
           </Table>
         </Row>
       </Container>
