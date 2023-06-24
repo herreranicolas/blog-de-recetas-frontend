@@ -25,14 +25,6 @@ const Administrador = () => {
     });
   }, [recetas]);
 
-  const componenteRenderizado = mostrarSpinner ? (
-    <div className="my-5">
-      <Spinner animation="border" variant="primary" />
-    </div>
-  ) : (
-    <tbody></tbody>
-  );
-
   return (
     <section className="seccionPrincipal font-poppins">
       <Container className="py-3">

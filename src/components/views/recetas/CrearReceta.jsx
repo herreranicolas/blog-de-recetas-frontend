@@ -1,5 +1,7 @@
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { crearReceta } from "../../helpers/queries";
+import Swal from "sweetalert2";
 
 const CrearReceta = () => {
   const {
@@ -11,6 +13,24 @@ const CrearReceta = () => {
 
   const onSubmit = (nuevaReceta) => {
     console.log(nuevaReceta);
+    crearReceta(nuevaReceta).then((respuesta) => {
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "¡Excelente!",
+          text: "¡La receta fue creada con exito!",
+          icon: "success",
+          confirmButtonColor: "#fa8072",
+        });
+        reset();
+      } else {
+        Swal.fire({
+          title: "Oops! Lo siento!",
+          text: "La receta no pudo ser creada",
+          icon: "error",
+          confirmButtonColor: "#fa8072",
+        });
+      }
+    });
   };
   return (
     <section className="seccionPrincipal font-poppins">

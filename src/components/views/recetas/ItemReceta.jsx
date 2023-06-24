@@ -5,8 +5,8 @@ const ItemReceta = ({ receta }) => {
     <tr>
       <td>{receta.nombre}</td>
       <td>{receta.descripcion}</td>
-      <td>{receta.ingredientes.join(", ") || receta.ingredientes}</td>
-      <td>{receta.pasos.join(", ") || receta.pasos}</td>
+      <td>{receta.ingredientes}</td>
+      <td>{receta.pasos}</td>
       <td>
         <span
           className="d-inline-block text-truncate"
