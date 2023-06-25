@@ -56,8 +56,9 @@ const CrearReceta = () => {
                 },
                 pattern: {
                   value:
-                    /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*$/,
-                  message: "No puedes ingresar simbolos o números",
+                    /^(?!^\s+$)([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*)(?:\.\s*([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*))*\.?$/,
+                  message:
+                    "Este campo es obligatorio. No puede contener simbolos, números, o espacios en blanco unicamente.",
                 },
               })}
             />
@@ -82,8 +83,9 @@ const CrearReceta = () => {
                 },
                 pattern: {
                   value:
-                    /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*$/,
-                  message: "No puedes ingresar simbolos o números",
+                    /^(?!^\s+$)([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*)(?:\.\s*([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*))*\.?$/,
+                  message:
+                    "Este campo es obligatorio. No puede contener simbolos, números, o espacios en blanco unicamente.",
                 },
               })}
             />
@@ -108,8 +110,9 @@ const CrearReceta = () => {
                 },
                 pattern: {
                   value:
-                    /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*$/,
-                  message: "No puedes ingresar simbolos o números",
+                    /^(?!^\s+$)([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*)(?:\.\s*([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*))*\.?$/,
+                  message:
+                    "Este campo es obligatorio. No puede contener simbolos, números, o espacios en blanco unicamente.",
                 },
               })}
             />
@@ -134,8 +137,9 @@ const CrearReceta = () => {
                 },
                 pattern: {
                   value:
-                    /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*$/,
-                  message: "No puedes ingresar simbolos o números",
+                    /^(?!^\s+$)([a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ.,!@#$%^&*()-_+=<>?:;"'\\[\]{}]+(?:,\s*[a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ.,!@#$%^°&*()-_+=<>?:;"'\\[\]{}]+)*)(?:\.\s*([a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ.,!@#$%^&*()-_+=<>?:;"'\\[\]{}]+(?:,\s*[a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ.,!@#$%^°&*()-_+=<>?:;"'\\[\]{}]+)*))*\.?$/,
+                  message:
+                    "Este campo es obligatorio. No puede contener espacios en blanco unicamente.",
                 },
               })}
             />

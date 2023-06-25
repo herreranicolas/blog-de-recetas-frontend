@@ -64,7 +64,7 @@ const DetalleReceta = () => {
                   <ul>
                     {receta.ingredientes.map((ingrediente, index) => (
                       <li key={index}>
-                        <span>{ingrediente}</span>
+                        <span className="text-capitalize">{ingrediente}</span>
                       </li>
                     ))}
                   </ul>

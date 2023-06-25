@@ -20,7 +20,7 @@ const EditarReceta = () => {
     obtenerReceta(id).then((respuesta) => {
       if (respuesta) {
         setValue("nombre", respuesta.nombre);
-        setValue("descripcion", respuesta.descripcion.normalize("NFD"));
+        setValue("descripcion", respuesta.descripcion);
         setValue("ingredientes", respuesta.ingredientes);
         setValue("pasos", respuesta.pasos);
         setValue("imagen", respuesta.imagen);
@@ -29,8 +29,6 @@ const EditarReceta = () => {
   }, []);
 
   const onSubmit = (recetaEditada) => {
-    recetaEditada.ingredientes = recetaEditada.ingredientes.split(",");
-    recetaEditada.pasos = recetaEditada.pasos.split(",");
     editarReceta(recetaEditada, id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire({
@@ -73,8 +71,9 @@ const EditarReceta = () => {
                 },
                 pattern: {
                   value:
-                    /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*$/,
-                  message: "No puedes ingresar simbolos o números",
+                    /^(?!^\s+$)([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*)(?:\.\s*([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*))*\.?$/,
+                  message:
+                    "Este campo es obligatorio. No puede contener simbolos, números, o espacios en blanco unicamente.",
                 },
               })}
             />
@@ -99,8 +98,9 @@ const EditarReceta = () => {
                 },
                 pattern: {
                   value:
-                    /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*$/,
-                  message: "No puedes ingresar simbolos o números",
+                    /^(?!^\s+$)([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*)(?:\.\s*([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*))*\.?$/,
+                  message:
+                    "Este campo es obligatorio. No puede contener simbolos, números, o espacios en blanco unicamente.",
                 },
               })}
             />
@@ -125,8 +125,9 @@ const EditarReceta = () => {
                 },
                 pattern: {
                   value:
-                    /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*$/,
-                  message: "No puedes ingresar simbolos o números",
+                    /^(?!^\s+$)([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*)(?:\.\s*([a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*))*\.?$/,
+                  message:
+                    "Este campo es obligatorio. No puede contener simbolos, números, o espacios en blanco unicamente.",
                 },
               })}
             />
@@ -150,9 +151,9 @@ const EditarReceta = () => {
                   message: "No puedes ingresar más de 50 caracteres",
                 },
                 pattern: {
-                  value:
-                    /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+(?:,\s*[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ]+)*$/,
-                  message: "No puedes ingresar simbolos o números",
+                  value: /^[\w\d\s]+(?:,\s*[\w\d\s]+)*$/,
+                  message:
+                    "Este campo es obligatorio. No puede contener espacios en blanco unicamente.",
                 },
               })}
             />

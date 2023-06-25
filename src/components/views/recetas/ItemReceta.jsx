@@ -55,7 +55,7 @@ const ItemReceta = ({ receta }) => {
     <tr>
       <td>{receta.nombre}</td>
       <td>{receta.descripcion}</td>
-      <td>{receta.ingredientes.join(", ")}</td>
+      <td className="text-capitalize">{receta.ingredientes.join(", ")}</td>
       <td>{receta.pasos.join(", ")}</td>
       <td>
         <span
