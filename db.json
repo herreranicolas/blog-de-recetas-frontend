@@ -1,22 +1,6 @@
 {
   "recetas": [
     {
-      "id": 1,
-      "nombre": "Tarta de manzana",
-      "descripcion": "Una deliciosa tarta de manzana casera con una base crujiente y un relleno jugoso de manzanas dulces. Perfecta para cualquier ocasión.",
-      "ingredientes": [
-        "manzanas",
-        "harina",
-        "azúcar"
-      ],
-      "pasos": [
-        "Pelar y cortar las manzanas",
-        "Preparar la masa",
-        "Hornear a 180°C por 30 minutos"
-      ],
-      "imagen": "https://images.pexels.com/photos/3065592/pexels-photo-3065592.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
       "id": 2,
       "nombre": "Spaghetti a la bolognesa",
       "descripcion": "Un clásico plato de pasta italiano con una salsa bolognesa rica y sabrosa. Los espaguetis se combinan perfectamente con la carne molida, los tomates y las especias.",
@@ -75,94 +59,6 @@
         "Dejar enfriar antes de servir"
       ],
       "imagen": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "nombre": "Torta",
-      "descripcion": "Una deliciosa torta",
-      "ingredientes": [
-        "chocolate",
-        "harina",
-        "azúcar"
-      ],
-      "pasos": [
-        "Chocolate",
-        "Preparar la masa",
-        "Hornear a 180°C por 30 minutos"
-      ],
-      "imagen": "https://images.pexels.com/photos/3065592/pexels-photo-3065592.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "id": 5
-    },
-    {
-      "nombre": "Torta2",
-      "descripcion": "Una deliciosa torta",
-      "ingredientes": [
-        "chocolate",
-        "harina",
-        "azúcar"
-      ],
-      "pasos": [
-        "Chocolate",
-        "Preparar la masa",
-        "Hornear a 180°C por 30 minutos"
-      ],
-      "imagen": "https://images.pexels.com/photos/3065592/pexels-photo-3065592.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "id": 6
-    },
-    {
-      "nombre": "Torta3",
-      "descripcion": "Una deliciosa torta",
-      "ingredientes": [
-        "chocolate",
-        "harina",
-        "azúcar"
-      ],
-      "pasos": [
-        "Chocolate",
-        "Preparar la masa",
-        "Hornear a 180°C por 30 minutos"
-      ],
-      "imagen": "https://images.pexels.com/photos/3065592/pexels-photo-3065592.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "id": 7
-    },
-    {
-      "nombre": "Nueva receta",
-      "descripcion": "Descripcion de nueva receta",
-      "ingredientes": "Nuevo ingrediente, nuevo ingrediente, nuevo ingrediente",
-      "pasos": "Nuevo paso, Nuevo paso, Nuevo paso",
-      "imagen": "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Recetas-faciles-de-cocinar-y-sobrevivir-en-casa-al-coronavirus_2.jpg",
-      "id": 8
-    },
-    {
-      "nombre": "Nueva receta",
-      "descripcion": "Descripcion de nueva receta",
-      "ingredientes": "Nuevo ingrediente, nuevo ingrediente, nuevo ingrediente",
-      "pasos": "Nuevo paso, Nuevo paso, Nuevo paso",
-      "imagen": "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Recetas-faciles-de-cocinar-y-sobrevivir-en-casa-al-coronavirus_2.jpg",
-      "id": 9
-    },
-    {
-      "nombre": "Nueva receta",
-      "descripcion": "Descripcion de nueva receta",
-      "ingredientes": "Nuevo ingrediente, nuevo ingrediente, nuevo ingrediente",
-      "pasos": "Nuevo paso, Nuevo paso, Nuevo paso",
-      "imagen": "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Recetas-faciles-de-cocinar-y-sobrevivir-en-casa-al-coronavirus_2.jpg",
-      "id": 10
-    },
-    {
-      "nombre": "Nueva receta ",
-      "descripcion": "Descripcion deliciosa nueva receta",
-      "ingredientes": "Ingrediente, dos, tres",
-      "pasos": "Uno, dos, tres, cuatro",
-      "imagen": "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Recetas-faciles-de-cocinar-y-sobrevivir-en-casa-al-coronavirus_2.jpg",
-      "id": 11
-    },
-    {
-      "nombre": "recetaEditada",
-      "descripcion": "recetaEditada",
-      "ingredientes": "recetaEditada",
-      "pasos": "recetaEditada",
-      "imagen": "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Recetas-faciles-de-cocinar-y-sobrevivir-en-casa-al-coronavirus_2.jpg",
-      "id": 12
     }
   ],
   "usuarioAdmin": [
