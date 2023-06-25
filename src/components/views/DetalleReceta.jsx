@@ -34,7 +34,7 @@ const DetalleReceta = () => {
         setReceta(respuesta[0]);
         setMostrarSpinner(false);
       } else if (respuesta[2] === undefined || respuesta[2] === 404) {
-        navegacion("/*");
+        navegacion("*");
       } else if (respuesta === undefined) {
         Swal.fire({
           title: "Oops! Lo siento!",
