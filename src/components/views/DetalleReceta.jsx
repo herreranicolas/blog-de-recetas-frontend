@@ -11,19 +11,34 @@ import {
 import { useParams } from "react-router";
 import Swal from "sweetalert2";
 import { obtenerReceta } from "../helpers/queries";
+import { useNavigate } from "react-router-dom";
 
 const DetalleReceta = () => {
   const [key, setKey] = useState("ingredientes");
   const [mostrarSpinner, setMostrarSpinner] = useState(true);
   const [receta, setReceta] = useState({});
   const { id } = useParams();
+  const navegacion = useNavigate();
 
   useEffect(() => {
     obtenerReceta(id).then((respuesta) => {
-      if (respuesta) {
-        setReceta(respuesta);
+      console.log(respuesta);
+      console.log(respuesta === undefined);
+      if (respuesta === undefined) {
+        Swal.fire({
+          title: "Oops! Lo siento!",
+          text: "No se pudo obtener la receta. Intente realizar esta operación en otro momento.",
+          icon: "error",
+          confirmButtonColor: "#fa8072",
+        });
+      }
+      if (respuesta[1] === 200) {
+        setReceta(respuesta[0]);
         setMostrarSpinner(false);
-      } else {
+      } else if (respuesta[2] === undefined || respuesta[2] === 404) {
+        console.log(respuesta[2]);
+        navegacion("*");
+      } else if (respuesta === undefined) {
         Swal.fire({
           title: "Oops! Lo siento!",
           text: "No se pudo obtener la receta. Intente realizar esta operación en otro momento.",

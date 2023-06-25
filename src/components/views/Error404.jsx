@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import error from "../../assets/kitchen-illustration.jpg";
 
 const Error404 = () => {
   return (
     <section
       style={{
         paddingLeft: 0,
-        backgroundImage: "url('../src/assets/kitchen-illustration.jpg')",
+        backgroundImage: `url(${error})`,
       }}
       className="seccionPrincipal p-5 d-flex justify-content-center align-items-center text-center"
     >

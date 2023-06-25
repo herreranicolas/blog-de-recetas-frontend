@@ -77,7 +77,7 @@ export const obtenerReceta = async (id) => {
   try {
     const respuesta = await fetch(URL_recetas + "/" + id);
     const receta = await respuesta.json();
-    return receta;
+    return [receta, respuesta.status];
   } catch (error) {
     console.log(error);
   }
