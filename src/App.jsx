@@ -14,7 +14,7 @@ import RutasAdministrador from "./components/routes/RutasAdministrador";
 
 function App() {
   const [usuarioLogueado, setUsuarioLogueado] = useState(
-    {} || sessionStorage.getItem("usuario")
+    "" || localStorage.getItem("usuario")
   );
 
   return (
@@ -32,7 +32,7 @@ function App() {
         ></Route>
         <Route
           exact
-          path="/detalle"
+          path="/detalle/:id"
           element={<DetalleReceta></DetalleReceta>}
         ></Route>
         <Route
@@ -43,7 +43,6 @@ function App() {
             </RutasProtegidas>
           }
         ></Route>
-
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>
       <Footer></Footer>

@@ -23,7 +23,7 @@ const Inicio = () => {
         });
       }
     });
-  }, [recetas]);
+  }, []);
   return (
     <section className="container seccionPrincipal">
       <h1 className="text-center py-2 fw-bolder">Recetas de Cocina</h1>
@@ -34,7 +34,7 @@ const Inicio = () => {
           md={2}
           lg={3}
           xl={4}
-          className="justify-content-center align-items-center"
+          className="justify-content-center align-items-stretch"
         >
           {mostrarSpinner ? (
             <div className="my-3 text-center">

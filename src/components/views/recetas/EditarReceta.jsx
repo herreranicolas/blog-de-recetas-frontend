@@ -29,6 +29,8 @@ const EditarReceta = () => {
   }, []);
 
   const onSubmit = (recetaEditada) => {
+    recetaEditada.ingredientes = recetaEditada.ingredientes.split(",");
+    recetaEditada.pasos = recetaEditada.pasos.split(",");
     editarReceta(recetaEditada, id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire({

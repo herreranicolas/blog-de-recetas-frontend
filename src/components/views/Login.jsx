@@ -17,7 +17,7 @@ const Login = ({ setUsuarioLogueado }) => {
   const onSubmit = (usuario) => {
     iniciarSesion(usuario).then((respuesta) => {
       if (respuesta) {
-        sessionStorage.setItem(
+        localStorage.setItem(
           "usuario",
           JSON.stringify(respuesta.nombreUsuario)
         );

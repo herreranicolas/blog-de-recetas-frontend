@@ -12,14 +12,25 @@ function CardReceta({ receta }) {
       text="light"
       className="me-md-3 mb-3"
     >
-      <Card.Img variant="top" src={receta.imagen} />
+      <Card.Img
+        variant="top"
+        src={receta.imagen}
+        style={{ height: "11.5rem" }}
+      />
       <Card.Body>
         <Card.Title>{receta.nombre}</Card.Title>
         <Card.Text>{receta.descripcion}</Card.Text>
-        <Button as={Link} variant="outline-danger" to="/detalle">
+      </Card.Body>
+      <div className="font-poppins text-uppercase mb-3 mt-auto px-3">
+        <Button
+          as={Link}
+          variant="outline-danger"
+          to={"/detalle/" + receta.id}
+          className="fw-bold"
+        >
           Ver receta
         </Button>
-      </Card.Body>
+      </div>
     </Card>
   );
 }

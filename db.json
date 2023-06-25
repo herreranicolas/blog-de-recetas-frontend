@@ -4,7 +4,11 @@
       "id": 1,
       "nombre": "Tarta de manzana",
       "descripcion": "Una deliciosa tarta de manzana casera con una base crujiente y un relleno jugoso de manzanas dulces. Perfecta para cualquier ocasión.",
-      "ingredientes": ["manzanas", "harina", "azúcar"],
+      "ingredientes": [
+        "manzanas",
+        "harina",
+        "azúcar"
+      ],
       "pasos": [
         "Pelar y cortar las manzanas",
         "Preparar la masa",
@@ -170,6 +174,18 @@
         "Servir con salsa de soja y wasabi al gusto"
       ],
       "imagen": "https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "nombre": "Soy tonto y no separo por comas",
+      "descripcion": "Soy tonto y no separo por comas",
+      "ingredientes": [
+        "Soy tonto y no separo por comas"
+      ],
+      "pasos": [
+        "Soy tonto y no separo por comas"
+      ],
+      "imagen": "https://cdn.ethic.es/wp-content/uploads/2023/03/imagen.jpg",
+      "id": 9
     }
   ],
   "usuarioAdmin": [

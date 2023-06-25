@@ -12,7 +12,8 @@ const CrearReceta = () => {
   } = useForm();
 
   const onSubmit = (nuevaReceta) => {
-    console.log(nuevaReceta);
+    nuevaReceta.ingredientes = nuevaReceta.ingredientes.split(",");
+    nuevaReceta.pasos = nuevaReceta.pasos.split(",");
     crearReceta(nuevaReceta).then((respuesta) => {
       if (respuesta.status === 201) {
         Swal.fire({
