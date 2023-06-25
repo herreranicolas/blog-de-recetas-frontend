@@ -1,5 +1,9 @@
+import { useEffect } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router";
+import { editarReceta, obtenerReceta } from "../../helpers/queries";
+import Swal from "sweetalert2";
 
 const EditarReceta = () => {
   const {
@@ -7,10 +11,41 @@ const EditarReceta = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
 
+  const { id } = useParams();
+
+  useEffect(() => {
+    obtenerReceta(id).then((respuesta) => {
+      if (respuesta) {
+        setValue("nombre", respuesta.nombre);
+        setValue("descripcion", respuesta.descripcion.normalize("NFD"));
+        setValue("ingredientes", respuesta.ingredientes);
+        setValue("pasos", respuesta.pasos);
+        setValue("imagen", respuesta.imagen);
+      }
+    });
+  }, []);
+
   const onSubmit = (recetaEditada) => {
-    console.log(recetaEditada);
+    editarReceta(recetaEditada, id).then((respuesta) => {
+      if (respuesta.status === 200) {
+        Swal.fire({
+          title: "¡Excelente!",
+          text: "¡La receta fue modificada con exito!",
+          icon: "success",
+          confirmButtonColor: "#fa8072",
+        });
+      } else {
+        Swal.fire({
+          title: "Oops! Lo siento!",
+          text: "La receta no pudo ser modificada",
+          icon: "error",
+          confirmButtonColor: "#fa8072",
+        });
+      }
+    });
   };
 
   return (
@@ -48,7 +83,7 @@ const EditarReceta = () => {
           <Form.Group className="mb-3" controlId="formDescripcion">
             <Form.Label>Descripcion*</Form.Label>
             <Form.Control
-              type="number"
+              type="text"
               placeholder="Ej: Un delicioso pastel"
               {...register("descripcion", {
                 required: "La descripción de la receta es obligatorio",
@@ -57,7 +92,7 @@ const EditarReceta = () => {
                   message: "Debes ingresar como mínimo 3 caracteres",
                 },
                 maxLength: {
-                  value: 100,
+                  value: 200,
                   message: "No puedes ingresar más de 50 caracteres",
                 },
                 pattern: {
@@ -74,7 +109,7 @@ const EditarReceta = () => {
           <Form.Group className="mb-3" controlId="formIngredientes">
             <Form.Label>Ingredientes*</Form.Label>
             <Form.Control
-              type="number"
+              type="text"
               placeholder="Ej: Chocolate, harina, azucar, manteca"
               {...register("ingredientes", {
                 required: "Los ingredientes de la receta son obligatorios",
@@ -83,7 +118,7 @@ const EditarReceta = () => {
                   message: "Debes ingresar como mínimo 3 caracteres",
                 },
                 maxLength: {
-                  value: 100,
+                  value: 200,
                   message: "No puedes ingresar más de 50 caracteres",
                 },
                 pattern: {
@@ -100,7 +135,7 @@ const EditarReceta = () => {
           <Form.Group className="mb-3" controlId="formPasos">
             <Form.Label>Pasos*</Form.Label>
             <Form.Control
-              type="number"
+              type="text"
               placeholder="Ej: Mezclar ingredientes, agregar huevos y manteca, etc. "
               {...register("pasos", {
                 required: "Los pasos de la receta son obligatorios",
@@ -109,7 +144,7 @@ const EditarReceta = () => {
                   message: "Debes ingresar como mínimo 3 caracteres",
                 },
                 maxLength: {
-                  value: 100,
+                  value: 200,
                   message: "No puedes ingresar más de 50 caracteres",
                 },
                 pattern: {

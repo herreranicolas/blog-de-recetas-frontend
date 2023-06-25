@@ -20,7 +20,7 @@ const ItemReceta = ({ receta }) => {
           <Button
             as={Link}
             className="btn btn-warning"
-            to="/administrador/editar-receta"
+            to={"/administrador/editar-receta/" + receta.id}
           >
             <i className="bi bi-pencil-square"></i>
           </Button>

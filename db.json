@@ -155,6 +155,14 @@
       "pasos": "Uno, dos, tres, cuatro",
       "imagen": "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Recetas-faciles-de-cocinar-y-sobrevivir-en-casa-al-coronavirus_2.jpg",
       "id": 11
+    },
+    {
+      "nombre": "recetaEditada",
+      "descripcion": "recetaEditada",
+      "ingredientes": "recetaEditada",
+      "pasos": "recetaEditada",
+      "imagen": "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Recetas-faciles-de-cocinar-y-sobrevivir-en-casa-al-coronavirus_2.jpg",
+      "id": 12
     }
   ],
   "usuarioAdmin": [
