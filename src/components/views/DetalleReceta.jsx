@@ -36,7 +36,6 @@ const DetalleReceta = () => {
         setReceta(respuesta[0]);
         setMostrarSpinner(false);
       } else if (respuesta[2] === undefined || respuesta[2] === 404) {
-        console.log(respuesta[2]);
         navegacion("*");
       } else if (respuesta === undefined) {
         Swal.fire({
@@ -88,7 +87,7 @@ const DetalleReceta = () => {
                   <ol>
                     {receta.pasos.map((ingrediente, index) => (
                       <li key={index}>
-                        <span>{ingrediente}</span>
+                        <span className="text-capitalize">{ingrediente}</span>
                       </li>
                     ))}
                   </ol>

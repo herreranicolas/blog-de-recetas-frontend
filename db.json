@@ -164,7 +164,8 @@
       ],
       "pasos": [
         "Cocinar el arroz de sushi siguiendo las instrucciones del paquete",
-        "Mezclar el vinagre de arroz, el azúcar y la sal para hacer el aderezo de sushi",
+        "Mezclar el vinagre de arroz",
+        " el azúcar y la sal para hacer el aderezo de sushi",
         "Agregar el aderezo al arroz cocido y mezclar suavemente",
         "Cortar el salmón en lonchas finas",
         "Colocar una capa delgada de arroz sobre una hoja de alga nori",
@@ -174,6 +175,22 @@
       ],
       "imagen": "https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg",
       "id": 8
+    },
+    {
+      "nombre": "Torta de frutilla dos",
+      "descripcion": "Una deliciosa torta dos",
+      "ingredientes": [
+        "Harina",
+        "azucar",
+        " dos"
+      ],
+      "pasos": [
+        "Mezclar ingredientes",
+        "hornear",
+        " dos"
+      ],
+      "imagen": "https://www.paulinacocina.net/wp-content/uploads/2022/07/receta-de-torta-de-frutillas.jpg",
+      "id": 10
     }
   ],
   "usuarioAdmin": [

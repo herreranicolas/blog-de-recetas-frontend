@@ -18,6 +18,7 @@ const EditarReceta = () => {
 
   useEffect(() => {
     obtenerReceta(id).then((respuesta) => {
+      respuesta = respuesta[0];
       if (respuesta) {
         setValue("nombre", respuesta.nombre);
         setValue("descripcion", respuesta.descripcion);
@@ -29,6 +30,10 @@ const EditarReceta = () => {
   }, []);
 
   const onSubmit = (recetaEditada) => {
+    recetaEditada.ingredientes = recetaEditada.ingredientes
+      .toString()
+      .split(",");
+    recetaEditada.pasos = recetaEditada.pasos.toString().split(",");
     editarReceta(recetaEditada, id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire({
@@ -94,7 +99,7 @@ const EditarReceta = () => {
                 },
                 maxLength: {
                   value: 200,
-                  message: "No puedes ingresar más de 50 caracteres",
+                  message: "No puedes ingresar más de 200 caracteres",
                 },
                 pattern: {
                   value:
@@ -121,7 +126,7 @@ const EditarReceta = () => {
                 },
                 maxLength: {
                   value: 200,
-                  message: "No puedes ingresar más de 50 caracteres",
+                  message: "No puedes ingresar más de 200 caracteres",
                 },
                 pattern: {
                   value:
@@ -147,11 +152,12 @@ const EditarReceta = () => {
                   message: "Debes ingresar como mínimo 3 caracteres",
                 },
                 maxLength: {
-                  value: 200,
-                  message: "No puedes ingresar más de 50 caracteres",
+                  value: 500,
+                  message: "No puedes ingresar más de 500 caracteres",
                 },
                 pattern: {
-                  value: /^[\w\d\s]+(?:,\s*[\w\d\s]+)*$/,
+                  value:
+                    /^(?!^\s+$)([a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ.,!@#$%^&*()-_+=<>?:;"'\\[\]{}]+(?:,\s*[a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ.,!@#$%^°&*()-_+=<>?:;"'\\[\]{}]+)*)(?:\.\s*([a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ.,!@#$%^&*()-_+=<>?:;"'\\[\]{}]+(?:,\s*[a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ.,!@#$%^°&*()-_+=<>?:;"'\\[\]{}]+)*))*\.?$/,
                   message:
                     "Este campo es obligatorio. No puede contener espacios en blanco unicamente.",
                 },
