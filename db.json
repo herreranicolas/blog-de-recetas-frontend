@@ -1,6 +1,18 @@
 {
   "recetas": [
     {
+      "id": 1,
+      "nombre": "Tarta de manzana",
+      "descripcion": "Una deliciosa tarta de manzana casera con una base crujiente y un relleno jugoso de manzanas dulces. Perfecta para cualquier ocasión.",
+      "ingredientes": ["manzanas", "harina", "azúcar"],
+      "pasos": [
+        "Pelar y cortar las manzanas",
+        "Preparar la masa",
+        "Hornear a 180°C por 30 minutos"
+      ],
+      "imagen": "https://images.pexels.com/photos/3065592/pexels-photo-3065592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
       "id": 2,
       "nombre": "Spaghetti a la bolognesa",
       "descripcion": "Un clásico plato de pasta italiano con una salsa bolognesa rica y sabrosa. Los espaguetis se combinan perfectamente con la carne molida, los tomates y las especias.",
@@ -59,6 +71,105 @@
         "Dejar enfriar antes de servir"
       ],
       "imagen": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 5,
+      "nombre": "Hamburguesa clásica",
+      "descripcion": "Una hamburguesa clásica hecha con una jugosa carne de res, acompañada de queso, lechuga, tomate y salsa especial. Una opción deliciosa para disfrutar en cualquier momento.",
+      "ingredientes": [
+        "carne de res",
+        "pan de hamburguesa",
+        "queso cheddar",
+        "lechuga",
+        "tomate",
+        "cebolla",
+        "salsa especial"
+      ],
+      "pasos": [
+        "Formar las hamburguesas con la carne de res",
+        "Asar las hamburguesas a la parrilla o en sartén",
+        "Tostar ligeramente los panes de hamburguesa",
+        "Agregar queso cheddar sobre las hamburguesas calientes",
+        "Montar la hamburguesa con lechuga, tomate y cebolla",
+        "Agregar la salsa especial al gusto",
+        "Servir y disfrutar"
+      ],
+      "imagen": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 6,
+      "nombre": "Milanesas Napolitanas",
+      "descripcion": "Un plato argentino clásico que consiste en filetes de carne empanizados, cubiertos con salsa de tomate, jamón y queso, y gratinados al horno. Una delicia que combina sabores y texturas.",
+      "ingredientes": [
+        "filetes de carne",
+        "pan rallado",
+        "huevo",
+        "salsa de tomate",
+        "jamón",
+        "queso",
+        "aceite",
+        "sal",
+        "pimienta"
+      ],
+      "pasos": [
+        "Sazonar los filetes de carne con sal y pimienta",
+        "Pasar los filetes por huevo batido y luego por pan rallado",
+        "Freír las milanesas en aceite caliente hasta que estén doradas",
+        "Colocar las milanesas en una fuente para horno",
+        "Cubrir cada milanesa con salsa de tomate, jamón y queso",
+        "Gratinar en el horno a temperatura alta hasta que el queso esté derretido y dorado",
+        "Servir caliente y disfrutar"
+      ],
+      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/KRMQHXYYBFBI5KRDXUYY5AXH2A.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Ensalada Caprese",
+      "descripcion": "Una ensalada fresca y sencilla de origen italiano que combina tomates maduros, mozzarella fresca y hojas de albahaca. Ideal como entrada o guarnición.",
+      "ingredientes": [
+        "tomates",
+        "mozzarella",
+        "albahaca fresca",
+        "aceite de oliva",
+        "vinagre balsámico",
+        "sal",
+        "pimienta"
+      ],
+      "pasos": [
+        "Cortar los tomates y la mozzarella en rodajas",
+        "Colocar alternativamente rodajas de tomate y mozzarella en un plato",
+        "Agregar hojas de albahaca fresca",
+        "Rociar con aceite de oliva y vinagre balsámico",
+        "Sazonar con sal y pimienta al gusto",
+        "Dejar reposar unos minutos antes de servir"
+      ],
+      "imagen": "https://images.pexels.com/photos/8177410/pexels-photo-8177410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 8,
+      "nombre": "Sushi de salmón",
+      "descripcion": "Un plato de sushi clásico que presenta finas lonchas de salmón crudo sobre arroz de sushi aderezado con salsa de soja y wasabi. Una delicia para los amantes de la comida japonesa.",
+      "ingredientes": [
+        "salmón fresco",
+        "arroz de sushi",
+        "alga nori",
+        "vinagre de arroz",
+        "azúcar",
+        "sal",
+        "salsa de soja",
+        "wasabi"
+      ],
+      "pasos": [
+        "Cocinar el arroz de sushi siguiendo las instrucciones del paquete",
+        "Mezclar el vinagre de arroz, el azúcar y la sal para hacer el aderezo de sushi",
+        "Agregar el aderezo al arroz cocido y mezclar suavemente",
+        "Cortar el salmón en lonchas finas",
+        "Colocar una capa delgada de arroz sobre una hoja de alga nori",
+        "Colocar una loncha de salmón sobre el arroz",
+        "Enrollar el sushi firmemente y cortarlo en rodajas",
+        "Servir con salsa de soja y wasabi al gusto"
+      ],
+      "imagen": "https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ],
   "usuarioAdmin": [
