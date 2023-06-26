@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { borrarReceta } from "../../helpers/queries";
 import Swal from "sweetalert2";
 
-const ItemReceta = ({ receta }) => {
+const ItemReceta = ({ receta, recetas, setRecetas }) => {
   const handleDelete = () => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -27,6 +27,7 @@ const ItemReceta = ({ receta }) => {
         if (result.isConfirmed) {
           borrarReceta(receta.id).then((respuesta) => {
             if (respuesta.status === 200) {
+              eliminarReceta();
               Swal.fire({
                 title: "¡Receta eliminada!",
                 text: "¡La receta fue eliminada!",
@@ -50,6 +51,13 @@ const ItemReceta = ({ receta }) => {
           );
         }
       });
+  };
+
+  const eliminarReceta = () => {
+    const nuevasRecetas = recetas.filter(
+      (recetaFiltrada) => recetaFiltrada !== receta
+    );
+    setRecetas(nuevasRecetas);
   };
   return (
     <tr>

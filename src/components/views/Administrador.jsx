@@ -23,7 +23,7 @@ const Administrador = () => {
         });
       }
     });
-  }, [recetas]);
+  }, []);
 
   return (
     <section className="seccionPrincipal font-poppins">
@@ -71,7 +71,12 @@ const Administrador = () => {
             ) : (
               <tbody>
                 {recetas.map((receta) => (
-                  <ItemReceta key={receta.id} receta={receta}></ItemReceta>
+                  <ItemReceta
+                    key={receta.id}
+                    receta={receta}
+                    recetas={recetas}
+                    setRecetas={setRecetas}
+                  ></ItemReceta>
                 ))}
               </tbody>
             )}
