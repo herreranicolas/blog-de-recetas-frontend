@@ -22,7 +22,7 @@ En este trabajo práctico aplicamos prácticas con componentes, ciclo de vida de
 En una terminal ejecuta el siguiente comando:
 
 ```
-https://github.com/herreranicolas/react-ejercicio-14.git
+git clone https://github.com/herreranicolas/react-ejercicio-14.git
 ```
 
 Una vez se hayan clonado los archivos, para poder descargar las dependencias de node_modules deberás ejecutar el siguiente comando:

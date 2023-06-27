@@ -3,7 +3,11 @@
     {
       "nombre": "Tarta de manzana",
       "descripcion": "Una deliciosa tarta de manzana casera con una base crujiente y un relleno jugoso de manzanas dulces. Perfecta para cualquier ocasión.",
-      "ingredientes": ["manzanas", "harina", "azúcar"],
+      "ingredientes": [
+        "manzanas",
+        "harina",
+        "azúcar"
+      ],
       "pasos": [
         "Pelar y cortar las manzanas",
         "Preparar la masa",
@@ -33,7 +37,6 @@
       "id": 2
     },
     {
-      "id": 3,
       "nombre": "Ensalada César",
       "descripcion": "Una refrescante ensalada clásica con lechuga crujiente, pollo tierno, trozos de pan tostado y un aderezo cremoso. Una combinación perfecta de sabores y texturas.",
       "ingredientes": [
@@ -50,10 +53,10 @@
         "Mezclar todos los ingredientes en un bol",
         "Agregar el aderezo y mezclar bien"
       ],
-      "imagen": "https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg"
+      "imagen": "https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg",
+      "id": 3
     },
     {
-      "id": 4,
       "nombre": "Pastel de chocolate",
       "descripcion": "Un delicioso pastel de chocolate con una textura suave y un sabor intenso. Cada bocado es un placer para los amantes del chocolate.",
       "ingredientes": [
@@ -70,7 +73,8 @@
         "Hornear a 180°C por 40 minutos",
         "Dejar enfriar antes de servir"
       ],
-      "imagen": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg"
+      "imagen": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg",
+      "id": 4
     },
     {
       "nombre": "Hamburguesa clásica",
@@ -89,7 +93,8 @@
         "Asar las hamburguesas a la parrilla o en sartén",
         "Tostar ligeramente los panes de hamburguesa",
         "Agregar queso cheddar sobre las hamburguesas calientes",
-        "Montar la hamburguesa con lechuga, tomate y cebolla",
+        "Montar la hamburguesa con lechuga",
+        " tomate y cebolla",
         "Agregar la salsa especial al gusto",
         "Servir y disfrutar"
       ],
@@ -97,7 +102,6 @@
       "id": 5
     },
     {
-      "id": 6,
       "nombre": "Milanesas Napolitanas",
       "descripcion": "Un plato argentino clásico que consiste en filetes de carne empanizados, cubiertos con salsa de tomate, jamón y queso, y gratinados al horno. Una delicia que combina sabores y texturas.",
       "ingredientes": [
@@ -116,14 +120,15 @@
         "Pasar los filetes por huevo batido y luego por pan rallado",
         "Freír las milanesas en aceite caliente hasta que estén doradas",
         "Colocar las milanesas en una fuente para horno",
-        "Cubrir cada milanesa con salsa de tomate, jamón y queso",
+        "Cubrir cada milanesa con salsa de tomate",
+        " jamón y queso",
         "Gratinar en el horno a temperatura alta hasta que el queso esté derretido y dorado",
         "Servir caliente y disfrutar"
       ],
-      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/KRMQHXYYBFBI5KRDXUYY5AXH2A.jpg"
+      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/KRMQHXYYBFBI5KRDXUYY5AXH2A.jpg",
+      "id": 6
     },
     {
-      "id": 7,
       "nombre": "Ensalada Caprese",
       "descripcion": "Una ensalada fresca y sencilla de origen italiano que combina tomates maduros, mozzarella fresca y hojas de albahaca. Ideal como entrada o guarnición.",
       "ingredientes": [
@@ -143,7 +148,8 @@
         "Sazonar con sal y pimienta al gusto",
         "Dejar reposar unos minutos antes de servir"
       ],
-      "imagen": "https://images.pexels.com/photos/8177410/pexels-photo-8177410.jpeg"
+      "imagen": "https://images.pexels.com/photos/8177410/pexels-photo-8177410.jpeg",
+      "id": 7
     },
     {
       "nombre": "Sushi de salmón",

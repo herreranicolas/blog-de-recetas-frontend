@@ -34,7 +34,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                     className="text-capitalize"
                     onClick={cerrarSesion}
                   >
-                    Logout
+                    Cerrar sesión
                   </Button>
                 </div>
               </>
