@@ -3,11 +3,7 @@
     {
       "nombre": "Tarta de manzana",
       "descripcion": "Una deliciosa tarta de manzana casera con una base crujiente y un relleno jugoso de manzanas dulces. Perfecta para cualquier ocasión.",
-      "ingredientes": [
-        "manzanas",
-        "harina",
-        "azúcar"
-      ],
+      "ingredientes": ["manzanas", "harina", "azúcar"],
       "pasos": [
         "Pelar y cortar las manzanas",
         "Preparar la masa",

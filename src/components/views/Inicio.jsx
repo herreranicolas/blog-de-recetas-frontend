@@ -40,10 +40,18 @@ const Inicio = () => {
             <div className="my-3 text-center">
               <Spinner animation="border" variant="danger"></Spinner>
             </div>
+          ) : recetas.length === 0 ? (
+            <div className="w-100">
+              <p className="my-4 text-center lead display-3">
+                No hay recetas cargadas
+              </p>
+            </div>
           ) : (
-            recetas.map((receta) => (
-              <CardReceta key={receta.id} receta={receta}></CardReceta>
-            ))
+            <>
+              {recetas.map((receta) => (
+                <CardReceta key={receta.id} receta={receta}></CardReceta>
+              ))}
+            </>
           )}
         </Row>
       </Container>
