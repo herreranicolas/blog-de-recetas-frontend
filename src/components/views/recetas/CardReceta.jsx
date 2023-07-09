@@ -25,7 +25,7 @@ function CardReceta({ receta }) {
         <Button
           as={Link}
           variant="outline-danger"
-          to={"/detalle/" + receta.id}
+          to={"/detalle/" + receta._id}
           className="fw-bold"
         >
           Ver receta

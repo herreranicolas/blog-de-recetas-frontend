@@ -25,7 +25,7 @@ const ItemReceta = ({ receta, recetas, setRecetas }) => {
       })
       .then((result) => {
         if (result.isConfirmed) {
-          borrarReceta(receta.id).then((respuesta) => {
+          borrarReceta(receta._id).then((respuesta) => {
             if (respuesta.status === 200) {
               eliminarReceta();
               Swal.fire({
@@ -78,7 +78,7 @@ const ItemReceta = ({ receta, recetas, setRecetas }) => {
           <Button
             as={Link}
             className="btn btn-warning"
-            to={"/administrador/editar-receta/" + receta.id}
+            to={"/administrador/editar-receta/" + receta._id}
           >
             <i className="bi bi-pencil-square"></i>
           </Button>

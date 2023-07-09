@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { editarReceta, obtenerReceta } from "../../helpers/queries";
 import Swal from "sweetalert2";
 
@@ -15,6 +15,7 @@ const EditarReceta = () => {
   } = useForm();
 
   const { id } = useParams();
+  const navegacion = useNavigate();
 
   useEffect(() => {
     obtenerReceta(id).then((respuesta) => {
@@ -32,8 +33,12 @@ const EditarReceta = () => {
   const onSubmit = (recetaEditada) => {
     recetaEditada.ingredientes = recetaEditada.ingredientes
       .toString()
-      .split(",");
-    recetaEditada.pasos = recetaEditada.pasos.toString().split(",");
+      .split(",")
+      .map((ingrediente) => ingrediente.trim());
+    recetaEditada.pasos = recetaEditada.pasos
+      .toString()
+      .split(",")
+      .map((paso) => paso.trim());
     editarReceta(recetaEditada, id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire({
@@ -42,6 +47,7 @@ const EditarReceta = () => {
           icon: "success",
           confirmButtonColor: "#fa8072",
         });
+        navegacion("/administrador");
       } else {
         Swal.fire({
           title: "Oops! Lo siento!",

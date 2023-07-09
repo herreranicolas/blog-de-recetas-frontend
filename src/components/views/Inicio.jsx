@@ -49,7 +49,7 @@ const Inicio = () => {
           ) : (
             <>
               {recetas.map((receta) => (
-                <CardReceta key={receta.id} receta={receta}></CardReceta>
+                <CardReceta key={receta._id} receta={receta}></CardReceta>
               ))}
             </>
           )}
