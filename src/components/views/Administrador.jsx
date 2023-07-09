@@ -76,6 +76,7 @@ const Administrador = () => {
                     receta={receta}
                     recetas={recetas}
                     setRecetas={setRecetas}
+                    setMostrarSpinner={setMostrarSpinner}
                   ></ItemReceta>
                 ))}
               </tbody>

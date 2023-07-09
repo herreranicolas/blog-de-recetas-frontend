@@ -1,9 +1,9 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { borrarReceta } from "../../helpers/queries";
+import { borrarReceta, obtenerListaRecetas } from "../../helpers/queries";
 import Swal from "sweetalert2";
 
-const ItemReceta = ({ receta, recetas, setRecetas }) => {
+const ItemReceta = ({ receta, recetas, setRecetas, setMostrarSpinner }) => {
   const handleDelete = () => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -27,7 +27,19 @@ const ItemReceta = ({ receta, recetas, setRecetas }) => {
         if (result.isConfirmed) {
           borrarReceta(receta._id).then((respuesta) => {
             if (respuesta.status === 200) {
-              eliminarReceta();
+              obtenerListaRecetas().then((respuesta) => {
+                if (respuesta) {
+                  setRecetas(respuesta);
+                  setMostrarSpinner(false);
+                } else {
+                  Swal.fire({
+                    title: "Oops! Lo siento!",
+                    text: "Intente realizar esta operación en otro momento.",
+                    icon: "error",
+                    confirmButtonColor: "#fa8072",
+                  });
+                }
+              });
               Swal.fire({
                 title: "¡Receta eliminada!",
                 text: "¡La receta fue eliminada!",
@@ -53,12 +65,6 @@ const ItemReceta = ({ receta, recetas, setRecetas }) => {
       });
   };
 
-  const eliminarReceta = () => {
-    const nuevasRecetas = recetas.filter(
-      (recetaFiltrada) => recetaFiltrada !== receta
-    );
-    setRecetas(nuevasRecetas);
-  };
   return (
     <tr>
       <td>{receta.nombre}</td>
