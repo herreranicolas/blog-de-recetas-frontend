@@ -18,7 +18,7 @@ const Login = ({ setUsuarioLogueado }) => {
 
   const onSubmit = (usuario) => {
     iniciarSesion(usuario).then((respuesta) => {
-      if (respuesta) {
+      if (respuesta && respuesta.status === 200) {
         localStorage.setItem(
           "usuario",
           JSON.stringify(respuesta.nombreUsuario)
@@ -26,6 +26,12 @@ const Login = ({ setUsuarioLogueado }) => {
         setUsuarioLogueado(respuesta.nombreUsuario);
         reset();
         navegacion("/administrador");
+        Swal.fire({
+          title: "¡Bienvenido!",
+          text: `Has ingresado como usuario: ${respuesta.nombreUsuario}`,
+          icon: "success",
+          confirmButtonColor: "#fa8072",
+        });
       } else {
         Swal.fire({
           title: "Oops! Lo siento!",

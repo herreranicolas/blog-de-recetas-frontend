@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 function Menu({ usuarioLogueado, setUsuarioLogueado }) {
   const navegacion = useNavigate();
@@ -12,6 +13,11 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
     localStorage.removeItem("usuario");
     setUsuarioLogueado("");
     navegacion("/");
+    Swal.fire({
+      title: "¡Has cerrado la sesión!",
+      icon: "success",
+      confirmButtonColor: "#fa8072",
+    });
   };
   return (
     <Navbar expand="lg" data-bs-theme="dark">
